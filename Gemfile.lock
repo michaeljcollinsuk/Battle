@@ -55,6 +55,7 @@ PLATFORMS
 
 DEPENDENCIES
   capybara
+  rack
   rspec
   rspec-sinatra
   sinatra
