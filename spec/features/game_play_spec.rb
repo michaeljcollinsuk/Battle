@@ -5,7 +5,7 @@ feature 'Game play' do
 
   scenario 'Attacking' do
     sign_in_and_play
-    button_click "Attack@!£!$!%"
-    expect(page).to have_content('HP: 90')
+    click_button "Attack@!£!$!%"
+    expect(page).to have_content('Jez Corbyn attacked Donald Trump')
   end
 end
