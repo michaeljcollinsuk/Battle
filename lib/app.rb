@@ -39,11 +39,7 @@ class Battle < Sinatra::Base
   erb :attack
   end
 
-  # def attack_player_one
-  #   attack_hp = (10 * counter)
-  #   @player_one_hp = STARTING_HP - attack_hp
-  #   counter += 1
-  # end
+
   # start the server if ruby file executed directly
   run! if app_file == $0
 end

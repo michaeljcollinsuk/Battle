@@ -7,4 +7,14 @@ class Player
     @name = name
     @hp = HP
   end
+
+  def attacked_hp
+    @hp = (STARTING_HP - 10)
+  end
+
+  def attack(player)
+    player.attacked_hp
+  end
+
+
 end
