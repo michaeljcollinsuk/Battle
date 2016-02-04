@@ -18,6 +18,12 @@ class Game
   end
 
   def player_two_attacks
-    p1.receive_damage
+    if turn.odd?
+      p1.receive_damage
+      @turn += 1
+    else
+      @turn = 0
+    end
   end
+
 end

@@ -30,8 +30,19 @@ describe Game do
   describe "#player_two_attacks" do
 
     it 'attacks player 1' do
+      expect(trump).to receive(:receive_damage)
+      game.player_one_attacks
       expect(corbyn).to receive(:receive_damage)
       game.player_two_attacks
     end
+
+    it "doesn't attack when not odd turn" do
+      allow(corbyn).to receive(:receive_damage)
+      game.player_two_attacks
+      expect(corbyn).to_not receive(:receive_damage)
+      game.player_two_attacks
+    end
+
+
   end
 end

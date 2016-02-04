@@ -18,19 +18,17 @@
       <h2 style="color:#e64d00;size:5;text-align:center;">
         HP: <%= @game.p1.hp %>
       </h2>
-      <% if @game.turn.even? %>
   <div id="player_one_dashboard" name="player_one_dashboard" align="center">
+    <% if @game.turn.even? %>
     <form action= "/attack1" id="left_attack">
       <input type="submit" value="Attack@!£!$!%">
     </form>
-  </div>
   <% else %>
-  <div id="player_one_dashboard" name="player_one_dashboard" align="center">
     <form action= "/wait_turn" id="left_attack">
       <input type="submit" value="Attack@!£!$!%">
     </form>
-  </div>
   <% end %>
+  </div>
 </div>
 
 
@@ -41,10 +39,16 @@
       <h2 style="color:#ffcc99;size:5;text-align:center;">
         HP: <%= @game.p2.hp %>
       </h2>
-  <div id="player_one_dashboard" name="player_one_dashboard" align="center">
+  <div id="player_two_dashboard" name="player_two_dashboard" align="center">
+    <% if @game.turn.odd? %>
     <form action= "/attack2" id="right_attack">
       <input type="submit" value="Attack@!£!$!%">
     </form>
+  <% else %>
+    <form action= "/wait_turn" id="right_attack">
+      <input type="submit" value="Attack@!£!$!%">
+    </form>
+  <% end %>
   </div>
 </div>
 
