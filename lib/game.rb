@@ -1,17 +1,20 @@
 class Game
 
-  attr_reader :p1, :p2
+  attr_reader :p1, :p2, :turn
 
   def initialize(player_1, player_2)
     @p1 = player_1
     @p2 = player_2
+    @turn = 0
   end
 
   def player_one_attacks
-    # if counter turn.even?
-    p2.receive_damage
-    # else
-      
+    if turn.even?
+      p2.receive_damage
+      @turn += 1
+    else
+      @turn = 1
+    end
   end
 
   def player_two_attacks

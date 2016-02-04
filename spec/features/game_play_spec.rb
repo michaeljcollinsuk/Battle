@@ -29,5 +29,13 @@ feature 'Game play' do
     expect(page).to have_content('HP: 90 HP: 100')
   end
 
+  scenario 'Corybn can\'t attack when it is not his turn' do
+    sign_in_and_play
+    find('#left_attack').click_button("Attack@!£!$!%")
+    click_button "OK"
+    find('#left_attack').click_button("Attack@!£!$!%")
+    expect(page).to have_content("Wait your turn!")
+  end
+
 
 end

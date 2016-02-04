@@ -44,6 +44,10 @@ class Battle < Sinatra::Base
   erb :attack2
   end
 
+  get '/wait_turn' do
+    erb :wait_turn
+  end
+
 
   # start the server if ruby file executed directly
   run! if app_file == $0

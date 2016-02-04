@@ -14,9 +14,15 @@ describe Game do
 
   describe "#player_one_attacks" do
 
-
     it 'attacks player 2' do
       expect(trump).to receive(:receive_damage)
+      game.player_one_attacks
+    end
+
+    it "doesn't attack when not even turn" do
+      allow(trump).to receive(:receive_damage)
+      game.player_one_attacks
+      expect(trump).to_not receive(:receive_damage)
       game.player_one_attacks
     end
   end

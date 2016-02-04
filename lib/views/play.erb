@@ -18,11 +18,19 @@
       <h2 style="color:#e64d00;size:5;text-align:center;">
         HP: <%= @game.p1.hp %>
       </h2>
+      <% if @game.turn.even? %>
   <div id="player_one_dashboard" name="player_one_dashboard" align="center">
     <form action= "/attack1" id="left_attack">
       <input type="submit" value="Attack@!£!$!%">
     </form>
   </div>
+  <% else %>
+  <div id="player_one_dashboard" name="player_one_dashboard" align="center">
+    <form action= "/wait_turn" id="left_attack">
+      <input type="submit" value="Attack@!£!$!%">
+    </form>
+  </div>
+  <% end %>
 </div>
 
 
