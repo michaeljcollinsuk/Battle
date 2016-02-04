@@ -1,7 +1,26 @@
 
-<h1 style="color:#004d00;size:6;text-align:center;">
-  <%= @player_one.name %> vs. <%=  @player_two.name %>
-</h1>
+<h1 style="color:#004d00;size:6;text-align:left;">
+  <!-- <span class="smallerFont">First half</span>
+  <span class="bigFont">Second half</span> -->
+  <%= @player_one.name %>
+  <h1 style="color:#004d00;size:7;text-align:center;">
+   vs.
+  <h1 style="color:#004d00;size:7;text-align:right;">
+   <%=  @player_two.name %>
+   </h1>
+
+<div >
+<img src='http://i.imgur.com/5kfz7kn.gif' align="left">
+</div>
+
+
+
+
+<div >
+<img src='http://www.slate.com/content/dam/slate/blogs/slatest/2016/01/slatest_160128_trump8.gif.CROP.original-original.gif' align="right">
+</div>
+
+
 <h2 style="color:#e64d00;size:5;text-align:left;">
   HP: <%= @player_one.hp %>
 </h2>

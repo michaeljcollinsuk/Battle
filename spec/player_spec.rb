@@ -16,7 +16,7 @@ describe Player do
       end
 
       it 'has 100 hit points' do
-        expect(player1.hp).to eq Player::HP
+        expect(player1.hp).to eq Player::STARTING_HP
       end
     end
   end
