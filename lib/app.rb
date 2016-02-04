@@ -9,7 +9,9 @@ class Battle < Sinatra::Base
 
 
   get '/' do
-    'Hello Battle!'
+    # 'Hello Battle!'
+    erb :index
+
   end
 
   get '/sign_up' do
