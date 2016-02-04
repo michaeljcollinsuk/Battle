@@ -8,7 +8,10 @@ class Game
   end
 
   def player_one_attacks
+    # if counter turn.even?
     p2.receive_damage
+    # else
+      
   end
 
   def player_two_attacks
