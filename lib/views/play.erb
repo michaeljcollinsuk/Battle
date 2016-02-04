@@ -2,8 +2,8 @@
 <h1 style="color:#004d00;size:6;text-align:left;">
   <!-- <span class="smallerFont">First half</span>
   <span class="bigFont">Second half</span> -->
-  <%= @player_one.name %>
-   <span style="float:right;"><%=  @player_two.name %>
+  <%= @game.p1.name %>
+   <span style="float:right;"><%=  @game.p2.name %>
    </h1>
    <h1 style="color:#004d00;size:6;text-align:center;">vs.</h1>
 
@@ -20,11 +20,15 @@
 
 
 <h2 style="color:#e64d00;size:5;text-align:left;">
-  HP: <%= @player_one.hp %>
+  HP: <%= @game.p1.hp %>
 </h2>
 <h2 style="color:#ffcc99;size:5;text-align:right;">
-  HP: <%= @player_two.hp %>
+  HP: <%= @game.p2.hp %>
 </h2>
-<form action= "/attack">
+<form action= "/attack" id="left_attack">
+<input type="submit" value="Attack@!£!$!%">
+</form>
+
+<form action= "/attack" id="right_attack">
 <input type="submit" value="Attack@!£!$!%">
 </form>
