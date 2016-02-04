@@ -5,7 +5,7 @@ feature 'Player Set up' do
 
   scenario 'Signing up' do
     sign_in_and_play
-    expect(page).to have_content('Jez Corbyn vs. Donald Trump')
+    expect(page).to have_content('Jez Corbyn Donald Trump')
   end
 
   scenario 'Viewing player two\'s hit points as player one' do
