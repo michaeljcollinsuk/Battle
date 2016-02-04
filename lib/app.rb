@@ -48,6 +48,11 @@ class Battle < Sinatra::Base
     erb :wait_turn
   end
 
+  get '/player_one_wins' do
+    @game = $game
+    erb :player_one_wins
+  end
+
 
   # start the server if ruby file executed directly
   run! if app_file == $0

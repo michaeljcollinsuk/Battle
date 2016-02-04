@@ -19,8 +19,12 @@
         HP: <%= @game.p1.hp %>
       </h2>
   <div id="player_one_dashboard" name="player_one_dashboard" align="center">
-    <% if @game.turn.even? %>
+    <% if @game.turn.even? && @game.p2.hp != 10 %>
     <form action= "/attack1" id="left_attack">
+      <input type="submit" value="Attack@!£!$!%">
+    </form>
+  <% elsif @game.p2.hp == 10 %>
+    <form action= "/player_one_wins" id="left_attack">
       <input type="submit" value="Attack@!£!$!%">
     </form>
   <% else %>
