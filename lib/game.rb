@@ -7,11 +7,11 @@ class Game
     @p2 = player_2
   end
 
-  def player_1_attacks
+  def player_one_attacks
     p2.receive_damage
   end
 
-  def player_2_attacks
+  def player_two_attacks
     p1.receive_damage
   end
 end

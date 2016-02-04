@@ -12,20 +12,20 @@ describe Game do
     end
   end
 
-  describe "#player_1_attacks" do
+  describe "#player_one_attacks" do
 
 
     it 'attacks player 2' do
       expect(trump).to receive(:receive_damage)
-      game.player_1_attacks
+      game.player_one_attacks
     end
   end
 
-  describe "#player_2_attacks" do
+  describe "#player_two_attacks" do
 
     it 'attacks player 1' do
       expect(corbyn).to receive(:receive_damage)
-      game.player_2_attacks
+      game.player_two_attacks
     end
   end
 end

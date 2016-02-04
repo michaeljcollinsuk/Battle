@@ -15,11 +15,10 @@ describe Player do
       end
     end
   end
-  context 'When the player is attacked' do
-    describe '#attack' do
-
+  context 'HP changes' do
+    describe '#receive_damage' do
       it 'deducts hp points from player' do
-        expect{corbyn.attack(trump)}.to change {trump.hp}.by(-10)
+        expect{corbyn.receive_damage}.to change {corbyn.hp}.by(-10)
       end
     end
   end
