@@ -16,7 +16,6 @@ describe Game do
 
 
     it 'attacks player 2' do
-      allow(trump).to receive(:receive_damage)
       expect(trump).to receive(:receive_damage)
       game.player_1_attacks
     end
@@ -25,7 +24,6 @@ describe Game do
   describe "#player_2_attacks" do
 
     it 'attacks player 1' do
-      allow(corbyn).to receive(:receive_damage)
       expect(corbyn).to receive(:receive_damage)
       game.player_2_attacks
     end
